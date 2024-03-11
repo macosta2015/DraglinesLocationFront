@@ -28,8 +28,7 @@ function App() {
   const onSaveCoordinates = async (data) => {
     try {
       // Make a POST request to the backend endpoint '/Draglines'
-      await axios.post('https://common-spiders-behave.loca.lt/Draglines', data, {headers: {'Bypass-Tunnel-Reminder': 1}});
-      // await axios.post('http://localhost:3000/Draglines', data); // Update the URL to match your backend endpoint
+      await axios.post('https://draglines-location-59e04617b209.herokuapp.com/Draglines', data);
     } catch (error) {
       console.error('Error saving coordinates:', error);
     }
@@ -51,4 +50,3 @@ function App() {
 }
 
 export default App;
-
